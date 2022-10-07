@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="18" viewBox="0 0 28 18">
+  <g id="gif" transform="translate(-259 -327.231)">
+    <path id="Rectangle_17" data-name="Rectangle 17" d="M2,2V16H26V2H2M2,0H26a2,2,0,0,1,2,2V16a2,2,0,0,1-2,2H2a2,2,0,0,1-2-2V2A2,2,0,0,1,2,0Z" transform="translate(259 327.231)" fill="#ecedf1"/>
+    <path id="Icon_material-gif" data-name="Icon material-gif" d="M16.719,13.5h2.128v8.51H16.719Zm-3.546,0H8.918A1.421,1.421,0,0,0,7.5,14.918v5.673A1.421,1.421,0,0,0,8.918,22.01h4.255a1.421,1.421,0,0,0,1.418-1.418V17.755H12.464v2.128H9.628V15.628h4.964v-.709A1.421,1.421,0,0,0,13.173,13.5Zm14.184,2.128V13.5H20.974v8.51H23.1V19.173h2.837V17.046H23.1V15.628Z" transform="translate(255.5 318.731)" fill="#ecedf1"/>
+  </g>
+</svg>
