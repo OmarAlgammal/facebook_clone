@@ -15,47 +15,60 @@ class FriendRequestItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         ImageWithBadge(
           imageUrl: imageUrl?? '',
           showOnlineState: false,
-          imageRadius: size64,
+          imageRadius: size86,
         ),
         gap12,
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              userName?? '',
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                ///TODO: create friends circles suggestions
-                Text(
-                  '$mutualFriendsNum mutual friends',
-                  style: Theme.of(context).textTheme.bodySmall!.copyWith(
-                    color: grayColor,
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Text(
+                userName?? '',
+                style: Theme.of(context).textTheme.titleLarge,
+              ),
+              gap4,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  ///TODO: create friends circles suggestions
+                  Text(
+                    '$mutualFriendsNum mutual friends',
+                    style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                      color: grayColor,
+                    ),
+                  )
+                ],
+              ),
+              gap4,
+              Row(
+                children: [
+                  Expanded(
+                    child: RoundedButton(text: 'Add a friend', onPressed: (){
+                      ///TODO: complete add friend action
+                    },
+                      buttonHeight: size36,
+                      borderRadius: circular8,
+                    ),
                   ),
-                )
-              ],
-            ),
-            Row(
-              children: [
-                RoundedButton(text: 'Add a friend', onPressed: (){
-                  ///TODO: complete add friend action
-                },
-                  buttonHeight: size36,
-                ),
-                gap12,
-                RoundedButton(text: 'Remove', onPressed: (){
-                  /// TODO: complete remove action
-                },
-                  buttonHeight: size36,
-                ),
-              ],
-            )
-          ],
+                  gap12,
+                  Expanded(
+                    child: RoundedButton(text: 'Remove', onPressed: (){
+                      /// TODO: complete remove action
+                    },
+                      buttonHeight: size36,
+                      borderRadius: circular8,
+                    ),
+                  ),
+                ],
+              )
+            ],
+          ),
         )
       ],
     );

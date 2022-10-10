@@ -39,21 +39,27 @@ class MyApp extends StatelessWidget {
           textTheme: TextTheme(
             headlineSmall: Theme.of(context).textTheme.headlineMedium!.copyWith(
               color: blackColor,
+              overflow: TextOverflow.ellipsis
             ),
             headlineMedium: Theme.of(context).textTheme.headlineMedium!.copyWith(
               color: blackColor,
+                overflow: TextOverflow.ellipsis
             ),
             headlineLarge: Theme.of(context).textTheme.headlineLarge!.copyWith(
               color: blackColor,
+                overflow: TextOverflow.ellipsis
             ),
               bodyMedium: Theme.of(context).textTheme.bodyMedium!.copyWith(
                 color: blackColor,
+                  overflow: TextOverflow.ellipsis
               ),
             bodySmall: Theme.of(context).textTheme.bodySmall!.copyWith(
               color: blackColor,
+                overflow: TextOverflow.ellipsis
             ),
             bodyLarge: Theme.of(context).textTheme.bodyLarge!.copyWith(
               color: blackColor,
+                overflow: TextOverflow.ellipsis
             ),
           )
       ),
@@ -70,7 +76,7 @@ class MyApp extends StatelessWidget {
         ],
         background: Container(color: Color(0xFFF5F5F5)),
       ),
-      initialRoute: AppRoutes.bottomNavPage,
+      initialRoute: AppRoutes.publishingPage,
     );
   }
 }

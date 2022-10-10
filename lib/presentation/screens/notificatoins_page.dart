@@ -23,7 +23,7 @@ class NotificationsPage extends StatelessWidget {
             title: Column(
               children: [
                 Text('Notifications',
-                    style: Theme.of(context).textTheme.headline4!.copyWith(
+                    style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                       color: blueColor,
                       fontWeight: FontWeight.bold,
                     )),
@@ -31,6 +31,7 @@ class NotificationsPage extends StatelessWidget {
                 Padding(
                   padding: paddingH16,
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       ChatItem(
                         showOnlineState: false,
@@ -38,7 +39,7 @@ class NotificationsPage extends StatelessWidget {
                         title: 'Friend Requests',
                         description: 'Ahmad and 136 other people',
                         badgeNum: 123,
-                        imageRadius: size48,
+                        imageRadius: size28,
                       ),
                       gap16,
                       ChatItem(
@@ -46,7 +47,7 @@ class NotificationsPage extends StatelessWidget {
                         badgeColor: redColor,
                         title: 'Invitaions to a group',
                         badgeNum: 10000,
-                        imageRadius: size48,
+                        imageRadius: size28,
                       ),
                     ],
                   ),

@@ -6,8 +6,12 @@ class AppRoutes {
   static const String watchPage = 'watch_page';
   static const String newsPage = 'news_page';
 
+  static const String publishingPage = 'publishing-page';
+
   static const String profilePage = 'profile-page';
+
   static const String friendsPage = 'friends-page';
+  static const String savedElementsPage = 'saved-elements-page';
 
   static const String allGroupsPage = 'all_groups_page';
   static const String groupPage = 'group_page';

@@ -5,6 +5,13 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:ionicons/ionicons.dart';
 
+
+///TODO: change search icon
+const IconData searchIcon = Ionicons.search_outline;
+
+/// PUBLISHING PAGE
+/// TODO: edit mention icon
+const IconData mentionIcon = FontAwesomeIcons.personCane;
 /// REACTOINS
 const String likeSvgIcon = 'assets/icons/reactions/like.svg';
 const String loveSvgIcon = 'assets/icons/reactions/love.svg';

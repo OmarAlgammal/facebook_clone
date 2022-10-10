@@ -7,7 +7,7 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 
 class SmallGallery extends StatelessWidget {
-  SmallGallery({Key? key, this.forMarketplace = false, this.categories, required this.onPressed,})
+  SmallGallery({Key? key, this.forMarketplace = false, this.categories, required this.onPressed, this.count = 9})
       : super(key: key);
 
   final VoidCallback onPressed;
@@ -105,6 +105,7 @@ class SmallGallery extends StatelessWidget {
   ];
 
   final bool forMarketplace;
+  final int count;
 
   /// TODO: make categories not null
   final List<CategoryModel>? categories;
@@ -117,7 +118,7 @@ class SmallGallery extends StatelessWidget {
       shrinkWrap: true,
       crossAxisCount: 3,
       crossAxisSpacing: 4,
-      itemCount: 15,
+      itemCount: count,
       padding: padding0,
       physics: const NeverScrollableScrollPhysics(),
       itemBuilder: (context, index) {

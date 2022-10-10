@@ -25,11 +25,11 @@ class ChatItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: imageRadius,
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          ImageWithBadge(imageRadius: imageRadius, imageUrl: '', showOnlineState: showOnlineState,),
+          ImageWithBadge(imageRadius: imageRadius, showOnlineState: showOnlineState,),
           gap12,
           Expanded(
             child: Column(

@@ -76,10 +76,10 @@ class MyGroupsPage extends StatelessWidget {
             itemCount: 11,
             itemBuilder: (context, index) => RoundedImageWithDescription(
               verticalArrange: false,
-              imageRadius: size56,
+              imageRadius: size86,
               borderRadius: circular8,
               text1: 'Minimalism',
-              text2: 'Updated 14 minuts ago',
+              text2: 'Updated 14 minutes ago',
               imageUrl: 'https://imgd.aeplcdn.com/664x374/n/cw/ec/97705/huracan-sto-exterior-right-front-three-quarter-2.jpeg?q=75',
               onPressed: (){
                 Navigator.pushNamed(context, AppRoutes.groupPage);

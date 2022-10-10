@@ -76,36 +76,44 @@ class RoundedImageWithDescription extends StatelessWidget {
               )
           ],
         ),
-        if (!verticalArrange) gap8,
-        if (text1 != null) gap8,
-        if (text1 != null)
-          Row(
+    if (!verticalArrange)
+    gap12,
+        Expanded(
+          child: Column(
             children: [
-              Expanded(
-                child: Text(
-                  text1!,
-                  maxLines: 2,
-                  textAlign: (centerText1)? TextAlign.center : TextAlign.start,
-                  style: text1Style ??
-                      Theme.of(context).textTheme.bodyMedium!.copyWith(
-                            color: blackColor,
-                            overflow: TextOverflow.ellipsis,
-                          ),
+              if (!verticalArrange) gap8,
+              if (text1 != null) gap8,
+              if (text1 != null)
+                Row(
+                    children: [
+                Expanded(
+                  child: Text(
+                    text1!,
+                    maxLines: 2,
+                    textAlign: (centerText1)? TextAlign.center : TextAlign.start,
+                    style: text1Style ??
+                        Theme.of(context).textTheme.bodyMedium!.copyWith(
+                          color: blackColor,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                  ),
                 ),
-              ),
+                    ],
+                  ),
+              if (text2 != null) gap8,
+              if (text2 != null)
+                Row(
+                  children: [
+                    Text(
+                        text2!,
+                        style: text2Style ??
+                            Theme.of(context).textTheme.bodyLarge!.copyWith(
+                              color: blackColor,
+                            )),
+                  ],
+                ),
             ],
           ),
-        if (text2 != null) gap8,
-        if (text2 != null)
-          Row(
-            children: [
-              Text(
-                  text2!,
-                  style: text2Style ??
-                      Theme.of(context).textTheme.bodyLarge!.copyWith(
-                            color: blackColor,
-                          )),
-            ],
-          ),
+        )
       ];
 }

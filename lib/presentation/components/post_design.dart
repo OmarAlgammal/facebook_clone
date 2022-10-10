@@ -24,7 +24,7 @@ class PostDesign extends StatelessWidget {
               child: Row(
                 children: [
                   ImageWithBadge(
-                    imageUrl: '',
+                    imageUrl: null,
                   ),
                   gap12,
                   Expanded(

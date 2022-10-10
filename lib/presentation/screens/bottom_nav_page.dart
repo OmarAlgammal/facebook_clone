@@ -18,7 +18,7 @@ class BottomNavPage extends StatefulWidget {
 }
 
 class _BottomNavPageState extends State<BottomNavPage> {
-  int index = 3;
+  int index = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -79,7 +79,7 @@ class _BottomNavPageState extends State<BottomNavPage> {
           ),
           BottomNavigationBarItem(
             label: 'profile',
-            icon: ImageWithBadge(imageRadius: size28, imageUrl: '', showOnlineState: false, )
+            icon: ImageWithBadge(imageRadius: size12, showOnlineState: false,)
           ),
         ],
       ),

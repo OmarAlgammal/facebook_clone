@@ -93,7 +93,9 @@ class CategoryScreen extends StatelessWidget {
                           icon: bookmarkOutLinedIcon,
                           iconColor: blackColor,
                           text: 'Saved',
-                          onPressed: () {}),
+                          onPressed: () {
+                            Navigator.pushNamed(context, AppRoutes.savedElementsPage);
+                          }),
                       GridItem(
                           icon: gameIcon,
                           iconColor: brightBlueColor,
@@ -111,7 +113,7 @@ class CategoryScreen extends StatelessWidget {
                           onPressed: () {}),
                     ],
                   ),
-                  gap24,
+                  gap36,
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -165,7 +167,7 @@ class CategoryScreen extends StatelessWidget {
               ),
             )
           ],
-        )
+        ),
       ],
     );
   }

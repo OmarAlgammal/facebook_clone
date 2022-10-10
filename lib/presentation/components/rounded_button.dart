@@ -3,7 +3,17 @@ import 'package:facebook_clone/presentation/constance/dimens.dart';
 import 'package:flutter/material.dart';
 
 class RoundedButton extends StatelessWidget {
-  const RoundedButton({Key? key, required this.text, this.fillColor = blueColor, this.textColor = whiteColor, this.leadingIcon, required this.onPressed, this.buttonWidth, this.buttonHeight = size48,}) : super(key: key);
+  const RoundedButton({
+    Key? key,
+    required this.text,
+    this.fillColor = blueColor,
+    this.textColor = whiteColor,
+    this.leadingIcon,
+    required this.onPressed,
+    this.buttonWidth,
+    this.buttonHeight = size48,
+    this.borderRadius,
+  }) : super(key: key);
 
   final String text;
   final Color fillColor, textColor;
@@ -11,6 +21,8 @@ class RoundedButton extends StatelessWidget {
   final VoidCallback onPressed;
   final double? buttonWidth;
   final double buttonHeight;
+  final BorderRadius? borderRadius;
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -18,31 +30,31 @@ class RoundedButton extends StatelessWidget {
       height: buttonHeight,
       child: DecoratedBox(
         decoration: BoxDecoration(
-          borderRadius: circular12,
+          borderRadius: borderRadius ?? circular12,
           color: fillColor,
         ),
-        child: Expanded(
-          child: TextButton(
-            onPressed: onPressed,
+        child: TextButton(
+          onPressed: onPressed,
+          child: Expanded(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               mainAxisSize: MainAxisSize.max,
               children: [
                 if (leadingIcon != null)
-                Row(
-                  children: [
-                    Icon(
-                      leadingIcon,
-                      color: whiteColor,
-                    ),
-                    gap8,
-                  ],
-                ),
+                  Row(
+                    children: [
+                      Icon(
+                        leadingIcon,
+                        color: whiteColor,
+                      ),
+                      gap8,
+                    ],
+                  ),
                 Text(
                   text,
                   style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                    color: textColor,
-                  ),
+                        color: textColor,
+                      ),
                 ),
               ],
             ),

@@ -1,4 +1,5 @@
 import 'package:facebook_clone/presentation/components/friend_request_item.dart';
+import 'package:facebook_clone/presentation/components/rounded_button.dart';
 import 'package:facebook_clone/presentation/constance/colors.dart';
 import 'package:facebook_clone/presentation/constance/dimens.dart';
 import 'package:facebook_clone/presentation/constance/icons.dart';
@@ -57,31 +58,49 @@ class FriendsPage extends StatelessWidget {
             'Friends',
             style: Theme.of(context).textTheme.headlineMedium,
           ),
+          iconTheme: IconThemeData(
+            color: blueColor,
+          ),
           automaticallyImplyLeading: true,
           actions: [
-            InkWell(
-              onTap: () {
-                ///TODO: complete search in friends
-              },
-              child: SvgPicture.asset(
-                searchSvgIcon,
-                fit: BoxFit.scaleDown,
-                width: size24,
-              ),
-            )
+            IconButton(onPressed: (){}, icon: Icon(
+              searchIcon,
+            )),
           ],
-          bottom: TabBar(
-            tabs: [
-              Tab(
-                text: 'All',
+          bottom: PreferredSize(
+            preferredSize: Size.fromHeight(size51),
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: TabBar(
+                isScrollable: true,
+                mouseCursor: MouseCursor.defer,
+                indicatorSize: TabBarIndicatorSize.label,
+                indicatorWeight: size3,
+                labelColor: blackColor,
+                labelPadding: EdgeInsets.only(right: 16,),
+                indicatorPadding: EdgeInsets.only(right: 16,),
+                labelStyle:
+                Theme.of(context).textTheme.headlineSmall!.copyWith(
+                  color: blackColor,
+                  fontWeight: FontWeight.bold,
+                ),
+                unselectedLabelColor: grayColor,
+                unselectedLabelStyle:
+                Theme.of(context).textTheme.titleMedium,
+                padding: paddingH16,
+                tabs: [
+                  Tab(
+                    text: 'All',
+                  ),
+                  Tab(
+                    text: 'Suggestions',
+                  ),
+                  Tab(
+                    text: 'Friends',
+                  )
+                ],
               ),
-              Tab(
-                text: 'Suggestions',
-              ),
-              Tab(
-                text: 'Friends',
-              )
-            ],
+            ),
           ),
         ),
         body: TabBarView(
@@ -116,15 +135,14 @@ class FriendsPage extends StatelessWidget {
                           onPressed: () {},
                           child: Text(
                             'See all',
-                            style:
-                                Theme.of(context).textTheme.bodyLarge!.copyWith(
-                                      color: blueColor,
-                                    ),
+                            style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                              color: blueColor,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ))
                     ],
                   ),
                   gap8,
-
                   ListView.separated(
                       shrinkWrap: true,
                       physics: const NeverScrollableScrollPhysics(),
@@ -132,7 +150,7 @@ class FriendsPage extends StatelessWidget {
                           FriendRequestItem(imageUrl: friends[index]['userImageUrl'],
                               userName: friends[index]['userName'],
                               mutualFriendsNum: friends[index]['mutualFriendsNum']),
-                      separatorBuilder: (context, index) => gap12,
+                      separatorBuilder: (context, index) => gap24,
                       itemCount: friends.length),
                 ],
               ),

@@ -54,7 +54,7 @@ class AllGroupsPage extends StatelessWidget {
                       labelPadding: EdgeInsets.only(right: 16,),
                       indicatorWeight: size3,
                       labelColor: blackColor,
-                      labelStyle: Theme.of(context).textTheme.headline5!.copyWith(
+                      labelStyle: Theme.of(context).textTheme.headlineSmall!.copyWith(
                         color: blackColor,
                         fontWeight: FontWeight.bold,
                       ),

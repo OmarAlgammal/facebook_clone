@@ -7,6 +7,8 @@ import 'package:facebook_clone/presentation/screens/home_page.dart';
 import 'package:facebook_clone/presentation/screens/news_page.dart';
 import 'package:facebook_clone/presentation/screens/productPage.dart';
 import 'package:facebook_clone/presentation/screens/profile_page.dart';
+import 'package:facebook_clone/presentation/screens/publishing_page.dart';
+import 'package:facebook_clone/presentation/screens/saved_elements.dart';
 import 'package:facebook_clone/presentation/screens/see_all_products_page.dart';
 import 'package:facebook_clone/presentation/screens/seller_page.dart';
 import 'package:facebook_clone/presentation/screens/watch_page.dart';
@@ -21,8 +23,12 @@ Map<String, Widget> routes = {
   AppRoutes.newsPage: const NewsPage(),
   AppRoutes.watchPage: const WatchPage(),
 
+  AppRoutes.publishingPage: const PublishingPage(),
+
   AppRoutes.profilePage: const ProfilePage(),
+
   AppRoutes.friendsPage: FriendsPage(),
+  AppRoutes.savedElementsPage: SavedElements(),
 
   AppRoutes.allGroupsPage: const AllGroupsPage(),
   AppRoutes.groupPage: const GroupPage(),

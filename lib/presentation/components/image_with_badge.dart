@@ -17,9 +17,10 @@ class ImageWithBadge extends StatelessWidget {
 
   ImageWithBadge(
       {Key? key,
-      this.imageRadius = size48,
-      required this.imageUrl,
+      this.imageRadius = size28,
+      this.imageUrl,
       this.reactionType,
+        this.showWhiteCircle = false,
       this.showOnlineState = false})
       : assert(showOnlineState && reactionType == null ||
             !showOnlineState && reactionType != null ||
@@ -28,44 +29,42 @@ class ImageWithBadge extends StatelessWidget {
 
   final bool showOnlineState;
   final double imageRadius;
-  final String imageUrl;
+  final String? imageUrl;
+  final bool showWhiteCircle;
   final ReactionsType? reactionType;
 
   @override
   Widget build(BuildContext context) {
     debugPrint('reaction is ${reactionType == null}');
     double onlineStateRadius = imageRadius / 10;
-    double reactionRadius = imageRadius / 2.6;
-    return SizedBox(
-      width: imageRadius,
-      height: imageRadius,
+    double reactionRadius = imageRadius / 3.1;
+    return CircleAvatar(
+      radius: (showWhiteCircle) ? imageRadius + size1 : imageRadius,
+      backgroundColor: whiteColor,
       child: Stack(
         children: [
           CircleAvatar(
             radius: imageRadius,
             backgroundImage: Image.network(
-                    imageUrl?? 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.efEAchZYo4PX1sGg-MKV1gHaE3%26pid%3DApi&f=1')
+                imageUrl?? 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.efEAchZYo4PX1sGg-MKV1gHaE3%26pid%3DApi&f=1')
                 .image,
           ),
           if (showOnlineState)
             Align(
               alignment: Alignment.bottomRight,
               child: CircleAvatar(
-                      radius: onlineStateRadius + 2,
-                      backgroundColor: whiteColor,
-                      child: CircleAvatar(
-                        radius: onlineStateRadius,
-                        backgroundColor: greenColor,
-                      ),
-                    )
+                radius: onlineStateRadius,
+                backgroundColor: greenColor,
+              )
             ),
           if (reactionType != null)
           Align(
               alignment: Alignment.bottomRight,
-              child: SvgPicture.asset(reactions[reactionType]!,
-                  width: reactionRadius,
-                  height: reactionRadius,
-                  fit: BoxFit.scaleDown),
+              child: CircleAvatar(
+                radius: reactionRadius,
+                child: SvgPicture.asset(reactions[reactionType]!,
+                    fit: BoxFit.scaleDown),
+              ),
             ),
         ],
       ),

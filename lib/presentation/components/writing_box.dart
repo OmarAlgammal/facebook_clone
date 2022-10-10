@@ -30,37 +30,39 @@ class WritingBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: height,
-      child: TextField(
-        onTap: onPressed,
-        autofocus: autofocus,
-        decoration: InputDecoration(
-          prefixIcon: showSuffix
-              ? SvgPicture.asset(
-                  searchSvgIcon,
+    return InkWell(
+      onTap: onPressed,
+      child: SizedBox(
+        height: height,
+        child: TextField(
+          autofocus: autofocus,
+          decoration: InputDecoration(
+            prefixIcon: showSuffix
+                ? SvgPicture.asset(
+                    searchSvgIcon,
+                    color: grayColor,
+                    fit: BoxFit.scaleDown,
+                  )
+                : null,
+            enabled: enabled,
+            hintText: hint,
+            hintStyle:  hintStyle
+                ??
+                Theme.of(context).textTheme.bodyLarge!.copyWith(
                   color: grayColor,
-                  fit: BoxFit.scaleDown,
-                )
-              : null,
-          enabled: enabled,
-          hintText: hint,
-          hintStyle:  hintStyle
-              ??
-              Theme.of(context).textTheme.bodyLarge!.copyWith(
-                color: grayColor,
-              ),
-          fillColor:
-              (withOpacity) ? brightGrayColor.withOpacity(.5) : brightGrayColor,
-          filled: filled,
-          border: OutlineInputBorder(
-            borderRadius: circular8,
-            borderSide: BorderSide.none,
+                ),
+            fillColor:
+                (withOpacity) ? brightGrayColor.withOpacity(.5) : brightGrayColor,
+            filled: filled,
+            border: OutlineInputBorder(
+              borderRadius: circular8,
+              borderSide: BorderSide.none,
+            ),
+            contentPadding: paddingH16,
           ),
-          contentPadding: paddingH16,
-        ),
-        style: TextStyle(
-          color: grayColor,
+          style: TextStyle(
+            color: grayColor,
+          ),
         ),
       ),
     );

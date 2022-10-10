@@ -5,6 +5,7 @@ import 'package:facebook_clone/presentation/constance/colors.dart';
 import 'package:facebook_clone/presentation/constance/dimens.dart';
 import 'package:facebook_clone/presentation/constance/icons.dart';
 import 'package:facebook_clone/presentation/screens/news_page.dart';
+import 'package:facebook_clone/utilities/routes.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -36,7 +37,7 @@ class HomePage extends StatelessWidget {
                       children: [
                         Text(
                           'Facebook',
-                          style: Theme.of(context).textTheme.headline4!.copyWith(
+                          style: Theme.of(context).textTheme.headlineMedium!.copyWith(
                             color: blueColor,
                             fontWeight: FontWeight.bold,
                           ),
@@ -46,12 +47,14 @@ class HomePage extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             ImageWithBadge(
-                              imageUrl: '',
                               showOnlineState: false,
                             ),
                             gap12,
                             Expanded(
                                 child: WritingBox(
+                                  onPressed: (){
+                                    Navigator.pushNamed(context, AppRoutes.publishingPage);
+                                  },
                               height: size36,
                               hint: 'What\'s in your mind',
                               enabled: false,
