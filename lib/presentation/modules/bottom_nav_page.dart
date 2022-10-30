@@ -3,11 +3,11 @@ import 'package:facebook_clone/presentation/components/image_with_badge.dart';
 import 'package:facebook_clone/presentation/constance/colors.dart';
 import 'package:facebook_clone/presentation/constance/dimens.dart';
 import 'package:facebook_clone/presentation/constance/icons.dart';
-import 'package:facebook_clone/presentation/screens/category_page.dart';
-import 'package:facebook_clone/presentation/screens/chat_page.dart';
-import 'package:facebook_clone/presentation/screens/home_page.dart';
-import 'package:facebook_clone/presentation/screens/notificatoins_page.dart';
-import 'package:facebook_clone/presentation/screens/profile_page.dart';
+import 'package:facebook_clone/presentation/modules/category_page.dart';
+import 'package:facebook_clone/presentation/modules/messenger_page.dart';
+import 'package:facebook_clone/presentation/modules/home_page.dart';
+import 'package:facebook_clone/presentation/modules/notificatoins_page.dart';
+import 'package:facebook_clone/presentation/modules/profile_page.dart';
 import 'package:flutter/material.dart';
 
 class BottomNavPage extends StatefulWidget {
@@ -27,10 +27,10 @@ class _BottomNavPageState extends State<BottomNavPage> {
     return Scaffold(
       body: IndexedStack(
         index: index,
-        children: const [
+        children: [
           HomePage(),
           CategoryScreen(),
-          ChatPage(),
+          MessengerPage(),
           NotificationsPage(),
           ProfilePage(),
 
@@ -54,7 +54,7 @@ class _BottomNavPageState extends State<BottomNavPage> {
           color: blueColor,
         ),
         unselectedIconTheme: IconThemeData(
-          color: brightGrayColor,
+          color: brightGreyColor,
         ),
         items: [
           BottomNavigationBarItem(

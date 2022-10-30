@@ -16,7 +16,7 @@ class PostsList extends StatelessWidget {
       itemBuilder: (context, index) {
         return PostDesign();
       },
-      separatorBuilder: (context, index) => expandGap12(color: brightGrayColor),
+      separatorBuilder: (context, index) => expandGap12(color: brightGreyColor),
     );
   }
 }

@@ -3,11 +3,12 @@ import 'package:facebook_clone/presentation/components/writing_box.dart';
 import 'package:facebook_clone/presentation/constance/colors.dart';
 import 'package:facebook_clone/presentation/constance/dimens.dart';
 import 'package:facebook_clone/presentation/constance/icons.dart';
+import 'package:facebook_clone/utilities/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class ChatPage extends StatelessWidget {
-  const ChatPage({Key? key}) : super(key: key);
+class MessengerPage extends StatelessWidget {
+  const MessengerPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,9 +26,9 @@ class ChatPage extends StatelessWidget {
                   Text(
                     'Chats',
                     style: Theme.of(context).textTheme.headlineLarge!.copyWith(
-                      color: blueColor,
-                      fontWeight: FontWeight.bold,
-                    ),
+                          color: blueColor,
+                          fontWeight: FontWeight.bold,
+                        ),
                   ),
                   Icon(
                     arrowDownIcon,
@@ -38,7 +39,10 @@ class ChatPage extends StatelessWidget {
               ),
               Align(
                 alignment: Alignment.centerRight,
-                child: SvgPicture.asset(penSvgIcon, fit: BoxFit.scaleDown,),
+                child: SvgPicture.asset(
+                  penSvgIcon,
+                  fit: BoxFit.scaleDown,
+                ),
               )
             ],
           ),
@@ -64,7 +68,17 @@ class ChatPage extends StatelessWidget {
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
                 itemBuilder: (context, index) {
-                  return ChatItem(title: 'Omar Agammal', description: 'where are you now, i\'m here for long time', badgeNum: 33,);
+                  return InkWell(
+                    onTap: (){
+                      ///TODO: send arguments
+                      Navigator.pushNamed(context, AppRoutes.chatPage);
+                    },
+                      child: ChatItem(
+                    title: 'Omar Agammal',
+                    imageRadius: size36,
+                    description: 'where are you now, i\'m here for long time',
+                    badgeNum: 33,
+                  ));
                 },
                 separatorBuilder: (context, index) {
                   return gap16;

@@ -20,7 +20,7 @@ class FriendRequestItem extends StatelessWidget {
         ImageWithBadge(
           imageUrl: imageUrl?? '',
           showOnlineState: false,
-          imageRadius: size86,
+          imageRadius: size48,
         ),
         gap12,
         Expanded(
@@ -40,7 +40,7 @@ class FriendRequestItem extends StatelessWidget {
                   Text(
                     '$mutualFriendsNum mutual friends',
                     style: Theme.of(context).textTheme.bodySmall!.copyWith(
-                      color: grayColor,
+                      color: greyColor,
                     ),
                   )
                 ],
@@ -52,7 +52,7 @@ class FriendRequestItem extends StatelessWidget {
                     child: RoundedButton(text: 'Add a friend', onPressed: (){
                       ///TODO: complete add friend action
                     },
-                      buttonHeight: size36,
+                      height: size36,
                       borderRadius: circular8,
                     ),
                   ),
@@ -61,7 +61,7 @@ class FriendRequestItem extends StatelessWidget {
                     child: RoundedButton(text: 'Remove', onPressed: (){
                       /// TODO: complete remove action
                     },
-                      buttonHeight: size36,
+                      height: size36,
                       borderRadius: circular8,
                     ),
                   ),

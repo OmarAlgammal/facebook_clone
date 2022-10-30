@@ -36,7 +36,8 @@ class ImageWithBadge extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     debugPrint('reaction is ${reactionType == null}');
-    double onlineStateRadius = imageRadius / 10;
+    double onlineStateBoxRadius = imageRadius / 1.5;
+    double onlineStateRadius = imageRadius / 7;
     double reactionRadius = imageRadius / 3.1;
     return CircleAvatar(
       radius: (showWhiteCircle) ? imageRadius + size1 : imageRadius,
@@ -52,9 +53,20 @@ class ImageWithBadge extends StatelessWidget {
           if (showOnlineState)
             Align(
               alignment: Alignment.bottomRight,
-              child: CircleAvatar(
-                radius: onlineStateRadius,
-                backgroundColor: greenColor,
+              child: Container(
+                width: onlineStateBoxRadius,
+                height: onlineStateBoxRadius,
+                child: Align(
+                  alignment: Alignment.center,
+                  child: CircleAvatar(
+                    radius: onlineStateRadius + size2,
+                    backgroundColor: whiteColor,
+                    child: CircleAvatar(
+                      radius: onlineStateRadius,
+                      backgroundColor: greenColor,
+                    ),
+                  ),
+                ),
               )
             ),
           if (reactionType != null)

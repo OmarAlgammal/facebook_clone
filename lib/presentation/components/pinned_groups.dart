@@ -31,7 +31,7 @@ class PinnedGroups extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: 24,
+                  height: size24,
                   child: TextButton(
                     onPressed: () {},
                     style: TextButton.styleFrom(
@@ -51,7 +51,7 @@ class PinnedGroups extends StatelessWidget {
             ),
             gap12,
             SizedBox(
-              height: 120,
+              height: size120,
               child: ListView.separated(
                 shrinkWrap: true,
                 physics: const BouncingScrollPhysics(),

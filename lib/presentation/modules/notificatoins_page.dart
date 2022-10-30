@@ -1,5 +1,5 @@
 import 'package:facebook_clone/presentation/components/chat_item.dart';
-import 'package:facebook_clone/presentation/components/notification_item.dart';
+import 'package:facebook_clone/presentation/components/post_notification.dart';
 import 'package:facebook_clone/presentation/constance/colors.dart';
 import 'package:facebook_clone/presentation/constance/dimens.dart';
 import 'package:facebook_clone/presentation/reactions_type.dart';
@@ -54,7 +54,7 @@ class NotificationsPage extends StatelessWidget {
                 ),
                 gap12,
                 expandGap2(
-                  color: brightGrayColor,
+                  color: brightGreyColor,
                 ),
               ],
             ),
@@ -75,7 +75,7 @@ class NotificationsPage extends StatelessWidget {
                     color: blackColor,
                     fontWeight: FontWeight.bold,
                   ),
-                  unselectedLabelColor: grayColor,
+                  unselectedLabelColor: greyColor,
                   unselectedLabelStyle:
                   Theme.of(context).textTheme.bodyLarge,
                   padding: paddingH16,
@@ -100,13 +100,13 @@ class NotificationsPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             gap12,
-            expandGap8(color: brightGrayColor,),
+            expandGap8(color: brightGreyColor,),
             gap12,
             Padding(
               padding: paddingH16,
               child: Text('New',
                 style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                  color: grayColor,
+                  color: greyColor,
                 ),),
             ),
             gap16,
@@ -120,7 +120,7 @@ class NotificationsPage extends StatelessWidget {
                       itemCount: 10,
                       shrinkWrap: true,
                       physics: const BouncingScrollPhysics(),
-                      itemBuilder: (context, index) => NotificationItem(
+                      itemBuilder: (context, index) => PostNotification(
                         userProfileImageUrl:
                         'https://images.pexels.com/photos/189857/pexels-photo-189857.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
                         userName: 'Alaa Hamed',
@@ -131,7 +131,7 @@ class NotificationsPage extends StatelessWidget {
                       padding: padding0,
                       itemCount: 10,
                       physics: const BouncingScrollPhysics(),
-                      itemBuilder: (context, index) => NotificationItem(
+                      itemBuilder: (context, index) => PostNotification(
                         userProfileImageUrl:
                         'https://images.pexels.com/photos/189857/pexels-photo-189857.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
                         userName: 'Alaa Hamed',
@@ -142,7 +142,7 @@ class NotificationsPage extends StatelessWidget {
                       padding: padding0,
                       itemCount: 10,
                       physics: const BouncingScrollPhysics(),
-                      itemBuilder: (context, index) => NotificationItem(
+                      itemBuilder: (context, index) => PostNotification(
                         userProfileImageUrl:
                         'https://images.pexels.com/photos/189857/pexels-photo-189857.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
                         userName: 'Alaa Hamed',

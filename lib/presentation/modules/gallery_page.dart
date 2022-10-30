@@ -1,7 +1,7 @@
 import 'package:facebook_clone/presentation/constance/colors.dart';
 import 'package:facebook_clone/presentation/constance/dimens.dart';
 import 'package:facebook_clone/presentation/constance/icons.dart';
-import 'package:facebook_clone/presentation/screens/uploads_photos_page.dart';
+import 'package:facebook_clone/presentation/modules/uploads_photos_page.dart';
 import 'package:flutter/material.dart';
 
 class GalleryPage extends StatelessWidget {
@@ -88,7 +88,7 @@ class GalleryPage extends StatelessWidget {
                     color: blackColor,
                     fontWeight: FontWeight.bold,
                   ),
-                  unselectedLabelColor: grayColor,
+                  unselectedLabelColor: greyColor,
                   unselectedLabelStyle:
                   Theme.of(context).textTheme.bodyLarge,
                   padding: paddingH16,

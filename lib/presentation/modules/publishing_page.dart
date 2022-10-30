@@ -18,9 +18,21 @@ class _PublishingPageState extends State<PublishingPage> {
   String publicationScopeSelected = 'Public';
 
   List<IconModel> publishingIcons = [
-    IconModel(icon: imageIcon, iconColor: greenColor, onPressed: () {}),
-    IconModel(icon: mentionIcon, iconColor: blueColor, onPressed: () {}),
-    IconModel(icon: smileIcon, iconColor: yellowColor, onPressed: () {}),
+    IconModel(icon: imageIcon, iconColor: greenColor, onPressed: () {
+      ///TODO: open mobile gallery
+    }),
+    IconModel(icon: locationIcon, iconColor: redColor, onPressed: () {
+      /// TODO: add location
+    }),
+    IconModel(icon: smileIcon, iconColor: yellowColor, onPressed: () {
+      /// TODO: add feeling
+    }),
+  ];
+
+  List<String> postImages = [
+    'https://i.natgeofe.com/k/3a6c9b0e-f5db-41b2-a077-5c26bad60b5c/turkey-instanbul-cityscape.jpg?w=636&h=358',
+    'https://images.lbc.co.uk/images/308953?crop=16_9&width=660&relax=1&signature=NWoy-Ofslg3S2h1X1gVo2oIMROc=',
+    'https://ucarecdn.com/1be25850-3052-4526-a02c-5c17a2ab77c9/',
   ];
 
   @override
@@ -46,10 +58,10 @@ class _PublishingPageState extends State<PublishingPage> {
       ),
       body: SingleChildScrollView(
         child: Column(
-          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             expandGap1(
-              color: brightGrayColor,
+              color: brightGreyColor,
             ),
             gap24,
             Padding(
@@ -59,10 +71,20 @@ class _PublishingPageState extends State<PublishingPage> {
                   ImageWithBadge(),
                   gap12,
                   Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        'Omar Algammal',
-                        style: Theme.of(context).textTheme.titleLarge,
+                      Wrap(
+                        children: [
+                          Text(
+                            'Omar Algammal',
+                            style: Theme.of(context).textTheme.titleLarge,
+                          ),
+                          gap4,
+                          Text(
+                            ' - Feel happy',
+                            style: Theme.of(context).textTheme.titleMedium,
+                          )
+                        ],
                       ),
                       DecoratedBox(
                           decoration: BoxDecoration(
@@ -92,7 +114,7 @@ class _PublishingPageState extends State<PublishingPage> {
               ),
             ),
             gap12,
-            expandGap2(color: brightGrayColor),
+            expandGap2(color: brightGreyColor),
             SizedBox.fromSize(
               size: Size.fromHeight(size48),
               child: ListView.builder(
@@ -107,25 +129,24 @@ class _PublishingPageState extends State<PublishingPage> {
                 ),
               ),
             ),
-            expandGap2(color: brightGrayColor),
-            CustomScrollView(
-              shrinkWrap: true,
-              slivers: [
-                SliverFillRemaining(
-                  child: Column(
-                    children: [
-                      ListView.separated(
-                        shrinkWrap: true,
-                        itemBuilder: (context, index) => Image.network(
-                            'https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80'),
-                        separatorBuilder: (context, index) => gap12,
-                        itemCount: 3,
-                      ),
-                    ],
-                  ),
+            expandGap2(color: brightGreyColor),
+            gap12,
+            Padding(
+              padding: paddingH8,
+              child: TextFormField(
+                textInputAction: TextInputAction.next,
+                decoration: InputDecoration(
+                  hintText: 'What are you thinking about ?',
+                  border: InputBorder.none,
                 ),
-              ],
-            )
+                maxLines: null,
+                style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                      color: blackColor,
+                    ),
+              ),
+            ),
+            gap12,
+
           ],
         ),
       ),

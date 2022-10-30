@@ -25,7 +25,7 @@ class FriendsPage extends StatelessWidget {
     {
       'userName': 'alaa Hamed',
       'userImageUrl':
-          'https://images.unsplash.com/photo-1614436163996-25cee5f54290?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHVzZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60',
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9TjS6OBjTiU87CQmHeg-cp2Bj5CkvArMR20RiAD0VrYwFyVtRw-NrvE3YxGDJ_lEungw&usqp=CAU',
       'mutualFriendsNum': '16',
     },
     {
@@ -84,7 +84,7 @@ class FriendsPage extends StatelessWidget {
                   color: blackColor,
                   fontWeight: FontWeight.bold,
                 ),
-                unselectedLabelColor: grayColor,
+                unselectedLabelColor: greyColor,
                 unselectedLabelStyle:
                 Theme.of(context).textTheme.titleMedium,
                 padding: paddingH16,
@@ -117,15 +117,15 @@ class FriendsPage extends StatelessWidget {
                         text: TextSpan(
                             text: 'Friends requests ',
                             style:
-                                Theme.of(context).textTheme.bodyLarge!.copyWith(
-                                      color: grayColor,
+                                Theme.of(context).textTheme.titleMedium!.copyWith(
+                                      color: greyColor,
                                     ),
                             children: [
                               TextSpan(
                                   text: '73',
                                   style: Theme.of(context)
                                       .textTheme
-                                      .bodyLarge!
+                                      .titleMedium!
                                       .copyWith(
                                         color: redColor,
                                       ))
@@ -135,7 +135,7 @@ class FriendsPage extends StatelessWidget {
                           onPressed: () {},
                           child: Text(
                             'See all',
-                            style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                            style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                               color: blueColor,
                               fontWeight: FontWeight.bold,
                             ),

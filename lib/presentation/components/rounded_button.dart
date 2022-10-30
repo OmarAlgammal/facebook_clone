@@ -10,8 +10,8 @@ class RoundedButton extends StatelessWidget {
     this.textColor = whiteColor,
     this.leadingIcon,
     required this.onPressed,
-    this.buttonWidth,
-    this.buttonHeight = size48,
+    this.width,
+    this.height = size48,
     this.borderRadius,
   }) : super(key: key);
 
@@ -19,15 +19,14 @@ class RoundedButton extends StatelessWidget {
   final Color fillColor, textColor;
   final IconData? leadingIcon;
   final VoidCallback onPressed;
-  final double? buttonWidth;
-  final double buttonHeight;
+  final double? width;
+  final double height;
   final BorderRadius? borderRadius;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: buttonWidth,
-      height: buttonHeight,
+      height: height,
       child: DecoratedBox(
         decoration: BoxDecoration(
           borderRadius: borderRadius ?? circular12,
@@ -35,29 +34,27 @@ class RoundedButton extends StatelessWidget {
         ),
         child: TextButton(
           onPressed: onPressed,
-          child: Expanded(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                if (leadingIcon != null)
-                  Row(
-                    children: [
-                      Icon(
-                        leadingIcon,
-                        color: whiteColor,
-                      ),
-                      gap8,
-                    ],
-                  ),
-                Text(
-                  text,
-                  style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                        color: textColor,
-                      ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              if (leadingIcon != null)
+                Row(
+                  children: [
+                    Icon(
+                      leadingIcon,
+                      color: whiteColor,
+                    ),
+                    gap8,
+                  ],
                 ),
-              ],
-            ),
+              Text(
+                text,
+                style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                      color: textColor,
+                    ),
+              ),
+            ],
           ),
         ),
       ),

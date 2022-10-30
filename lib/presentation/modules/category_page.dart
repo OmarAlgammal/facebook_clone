@@ -150,7 +150,7 @@ class CategoryScreen extends StatelessWidget {
                           text1: 'Pantalon for men it is very comfort',
                           text2: '\$ 14',
                           showSaveIcon: true,
-                          imageUrl: 'https://imgd.aeplcdn.com/664x374/n/cw/ec/97705/huracan-sto-exterior-right-front-three-quarter-2.jpeg?q=75',
+                          imageUrl: null,
                           text2Style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                             fontWeight: FontWeight.bold,
                             fontSize: size24,

@@ -1,4 +1,5 @@
 import 'package:facebook_clone/presentation/components/image_with_badge.dart';
+import 'package:facebook_clone/presentation/components/profile_state.dart';
 import 'package:facebook_clone/presentation/constance/colors.dart';
 import 'package:facebook_clone/presentation/constance/dimens.dart';
 import 'package:flutter/material.dart';
@@ -51,14 +52,14 @@ class ChatItem extends StatelessWidget {
                         description,
                         maxLines: 1,
                         style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                            color: grayColor, overflow: TextOverflow.ellipsis),
+                            color: greyColor, overflow: TextOverflow.ellipsis),
                       ),
                     ),
                     gap8,
                     Text(
                       '22m',
                       style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                            color: grayColor,
+                            color: greyColor,
                           ),
                     ),
                     gap12,

@@ -19,9 +19,9 @@ class NewsPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               gap8,
-              expandGap8(color: brightGrayColor,),
+              expandGap8(color: brightGreyColor,),
               StatusBar(),
-              ListView.builder(
+              ListView.separated(
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
                 padding: padding0,
@@ -29,6 +29,7 @@ class NewsPage extends StatelessWidget {
                 itemBuilder: (context, index){
                   return PostDesign();
                 },
+                separatorBuilder: (context, index) => expandGap12(color: brightGreyColor),
               )
             ],
           ),

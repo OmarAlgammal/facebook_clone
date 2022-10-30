@@ -44,7 +44,7 @@ class PostDesign extends StatelessWidget {
                           'August 15 at 15:36',
                           style:
                               Theme.of(context).textTheme.titleSmall!.copyWith(
-                                    color: grayColor,
+                                    color: greyColor,
                                   ),
                         ),
                       ],
@@ -59,7 +59,7 @@ class PostDesign extends StatelessWidget {
                       icon: Icon(
                         moreIcon,
                       ),
-                      color: brightGrayColor,
+                      color: brightGreyColor,
                     ),
                   ),
                 ],
@@ -155,7 +155,7 @@ class PostDesign extends StatelessWidget {
                     Text(
                       '12',
                       style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                        color: grayColor,
+                        color: greyColor,
                       ),
                     ),
                   ],
@@ -163,15 +163,13 @@ class PostDesign extends StatelessWidget {
               ),
             ),
             gap12,
-            expandGap2(color: brightGrayColor),
+            expandGap2(color: brightGreyColor),
             gap12,
             Padding(
               padding: paddingH16,
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
-                  ImageWithBadge(imageRadius: size28, imageUrl: 'imageUrl', showOnlineState: false,),
-                  gap12,
                   Expanded(
                     child: WritingBox(filled: true, enabled: true, autofocus: false, hint: 'Write a Comment',),
                   ),
@@ -181,17 +179,18 @@ class PostDesign extends StatelessWidget {
                     onPressed: (){},
                     icon: Icon(
                       gifIcon,
-                      color: grayColor,
+                      color: greyColor,
                       size: size24,
                     ),
-                  ),IconButton(
+                  ),
+                  IconButton(
                     color: Colors.red,
                     padding: padding0,
-                    iconSize: size24,
+                    iconSize: size18,
                     onPressed: (){},
                     icon:Icon(
                       smileIcon,
-                      color: grayColor,
+                      color: greyColor,
                       size: size24,
                     ),
                   ),

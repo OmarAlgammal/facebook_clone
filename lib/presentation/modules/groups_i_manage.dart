@@ -14,7 +14,7 @@ class GroupsIManage extends StatelessWidget {
       physics: const BouncingScrollPhysics(),
       child: Column(
         children: [
-          expandGap8(color: brightGrayColor),
+          expandGap8(color: brightGreyColor),
           Padding(
             padding: paddingH16,
             child: Row(
@@ -32,7 +32,7 @@ class GroupsIManage extends StatelessWidget {
                               text: '24',
                               style:
                               Theme.of(context).textTheme.bodyLarge!.copyWith(
-                                color: grayColor,
+                                color: greyColor,
                               ))
                         ]),
                   ),

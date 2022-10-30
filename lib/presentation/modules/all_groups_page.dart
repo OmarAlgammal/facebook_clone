@@ -2,8 +2,8 @@ import 'package:facebook_clone/presentation/components/writing_box.dart';
 import 'package:facebook_clone/presentation/constance/colors.dart';
 import 'package:facebook_clone/presentation/constance/dimens.dart';
 import 'package:facebook_clone/presentation/constance/icons.dart';
-import 'package:facebook_clone/presentation/screens/groups_i_manage.dart';
-import 'package:facebook_clone/presentation/screens/my_groups_page.dart';
+import 'package:facebook_clone/presentation/modules/groups_i_manage.dart';
+import 'package:facebook_clone/presentation/modules/my_groups_page.dart';
 import 'package:flutter/material.dart';
 
 class AllGroupsPage extends StatelessWidget {
@@ -43,7 +43,7 @@ class AllGroupsPage extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    expandGap2(color: brightGrayColor,),
+                    expandGap2(color: brightGreyColor,),
                     gap16,
                     TabBar(
                       padding: EdgeInsets.only(left: 16, bottom: 8,),

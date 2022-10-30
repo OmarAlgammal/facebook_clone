@@ -1,17 +1,112 @@
 import 'package:facebook_clone/presentation/components/image_with_badge.dart';
 import 'package:facebook_clone/presentation/components/rounded_button.dart';
-import 'package:facebook_clone/presentation/components/small_gallery.dart';
+import 'package:facebook_clone/presentation/components/gallery.dart';
 import 'package:facebook_clone/presentation/components/writing_box.dart';
 import 'package:facebook_clone/presentation/constance/colors.dart';
 import 'package:facebook_clone/presentation/constance/dimens.dart';
 import 'package:facebook_clone/presentation/constance/icons.dart';
+import 'package:facebook_clone/presentation/models/category_model.dart';
 import 'package:facebook_clone/updated_component/posts_list.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:readmore/readmore.dart';
 
 class GroupPage extends StatelessWidget {
-  const GroupPage({Key? key}) : super(key: key);
+  GroupPage({Key? key}) : super(key: key);
+
+  final List<CategoryModel> categoryModels = [
+    CategoryModel(
+      imageUrl:
+      'https://imgd.aeplcdn.com/664x374/n/cw/ec/97705/huracan-sto-exterior-right-front-three-quarter-2.jpeg?q=75',
+      text1: 'Vehicles',
+    ),
+    CategoryModel(
+      imageUrl:
+      'https://assets.pbimgs.com/pbimgs/rk/images/dp/wcm/202225/0705/banks-extending-dining-table-2-c.jpg',
+      text1: 'Home',
+    ),
+    CategoryModel(
+      imageUrl:
+      'https://images.rezfusion.com/evrn/HIKEWE/107962/6478780517.jpg?optimize=true&rotate=true&quality=70&width=580',
+      text1: 'Rentals',
+    ),
+    CategoryModel(
+      imageUrl:
+      'https://sparkimg.nl/cdn-cgi/image/w=480,h=320,fit=pad,f=auto/https://static.iphoned.nl/orca/products/18699/apple-iphone-14-pro-max.jpg',
+      text1: 'Electronics',
+    ),
+    CategoryModel(
+      imageUrl:
+      'https://www.patoys.in/image/cache/catalog/productsimage/dls-jeep-dls-002-01-1000x1000.jpg',
+      text1: 'Family',
+    ),
+    CategoryModel(
+      imageUrl:
+      'https://static-01.daraz.com.bd/p/b866f33dd13ec432195fd3f1c2d96206.jpg',
+      text1: 'Clothing',
+    ),
+    CategoryModel(
+      imageUrl:
+      'https://imgd.aeplcdn.com/664x374/n/cw/ec/97705/huracan-sto-exterior-right-front-three-quarter-2.jpeg?q=75',
+      text1: 'Vehicles',
+    ),
+    CategoryModel(
+      imageUrl:
+      'https://assets.pbimgs.com/pbimgs/rk/images/dp/wcm/202225/0705/banks-extending-dining-table-2-c.jpg',
+      text1: 'Home',
+    ),
+    CategoryModel(
+      imageUrl:
+      'https://images.rezfusion.com/evrn/HIKEWE/107962/6478780517.jpg?optimize=true&rotate=true&quality=70&width=580',
+      text1: 'Rentals',
+    ),
+    CategoryModel(
+      imageUrl:
+      'https://sparkimg.nl/cdn-cgi/image/w=480,h=320,fit=pad,f=auto/https://static.iphoned.nl/orca/products/18699/apple-iphone-14-pro-max.jpg',
+      text1: 'Electronics',
+    ),
+    CategoryModel(
+      imageUrl:
+      'https://www.patoys.in/image/cache/catalog/productsimage/dls-jeep-dls-002-01-1000x1000.jpg',
+      text1: 'Family',
+    ),
+    CategoryModel(
+      imageUrl:
+      'https://static-01.daraz.com.bd/p/b866f33dd13ec432195fd3f1c2d96206.jpg',
+      text1: 'Clothing',
+    ),
+    CategoryModel(
+      imageUrl:
+      'https://imgd.aeplcdn.com/664x374/n/cw/ec/97705/huracan-sto-exterior-right-front-three-quarter-2.jpeg?q=75',
+      text1: 'Vehicles',
+    ),
+    CategoryModel(
+      imageUrl:
+      'https://assets.pbimgs.com/pbimgs/rk/images/dp/wcm/202225/0705/banks-extending-dining-table-2-c.jpg',
+      text1: 'Home',
+    ),
+    CategoryModel(
+      imageUrl:
+      'https://images.rezfusion.com/evrn/HIKEWE/107962/6478780517.jpg?optimize=true&rotate=true&quality=70&width=580',
+      text1: 'Rentals',
+    ),
+    CategoryModel(
+      imageUrl:
+      'https://sparkimg.nl/cdn-cgi/image/w=480,h=320,fit=pad,f=auto/https://static.iphoned.nl/orca/products/18699/apple-iphone-14-pro-max.jpg',
+      text1: 'Electronics',
+    ),
+    CategoryModel(
+      imageUrl:
+      'https://www.patoys.in/image/cache/catalog/productsimage/dls-jeep-dls-002-01-1000x1000.jpg',
+      text1: 'Family',
+    ),
+    CategoryModel(
+      imageUrl:
+      'https://static-01.daraz.com.bd/p/b866f33dd13ec432195fd3f1c2d96206.jpg',
+      text1: 'Clothing',
+    ),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -90,7 +185,7 @@ class GroupPage extends StatelessWidget {
                   ),
                   gap24,
                   expandGap2(
-                    color: brightGrayColor,
+                    color: brightGreyColor,
                   ),
                   Padding(
                     padding: paddingH16,
@@ -99,63 +194,49 @@ class GroupPage extends StatelessWidget {
                         ListTile(
                           leading: Icon(
                             peopleIcon,
-                            color: grayColor,
+                            color: greyColor,
                             size: size24,
                           ),
                           contentPadding: padding0,
-                          trailing: SizedBox(
-                            width: 80,
-                            child: Stack(
-                              alignment: Alignment.center,
-                              children: [
-                                Positioned(
-                                  right: 0,
-                                  child: ImageWithBadge(
-                                    imageUrl: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80',
-                                    showOnlineState: false,
-                                    imageRadius: size12,
-                                  ),
+                          trailing: ListView.separated(
+                            scrollDirection: Axis.horizontal,
+                            shrinkWrap: true,
+                            itemCount: 3,
+                            itemBuilder: (context, index) =>
+                                ImageWithBadge(
+                                  imageUrl:
+                                  'https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80',
+                                  showOnlineState: false,
+                                  imageRadius: size8,
+                                  showWhiteCircle: true,
                                 ),
-                                Positioned(
-                                  right: size18,
-                                  child: ImageWithBadge(
-                                    imageUrl: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80',
-                                    showOnlineState: false,
-                                    imageRadius: size12,
-                                    showWhiteCircle: true,
-                                  ),
-                                ),
-                                Positioned(
-                                  right: size40,
-                                  child: ImageWithBadge(
-                                    imageUrl: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80',
-                                    showOnlineState: false,
-                                    imageRadius: size12,
-                                    showWhiteCircle: true,
-                                  ),
-                                ),
-
-                              ],
-                            ),
+                            separatorBuilder: (context, index) =>
+                            SizedBox(),
                           ),
                           title: Text(
                             '255.3K members . 37 friends',
-                            style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                              color: grayColor,
-                            ),
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyMedium!
+                                .copyWith(
+                                  color: greyColor,
+                                ),
                           ),
                         ),
                         ListTile(
                           leading: Icon(
                             postIcon,
-                            color: grayColor,
+                            color: greyColor,
                             size: size24,
                           ),
                           contentPadding: padding0,
                           title: Text(
                             '1483 posts . 17 new today',
-                            style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                                  color: grayColor,
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyMedium!
+                                .copyWith(
+                                  color: greyColor,
                                 ),
                           ),
                         ),
@@ -163,12 +244,15 @@ class GroupPage extends StatelessWidget {
                           contentPadding: padding0,
                           leading: Icon(
                             globeIcon,
-                            color: grayColor,
+                            color: greyColor,
                             size: size24,
                           ),
                           title: Text(
                             'www.bestravel.com',
-                            style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyMedium!
+                                .copyWith(
                                   color: blueColor,
                                 ),
                           ),
@@ -182,7 +266,10 @@ class GroupPage extends StatelessWidget {
                           ),
                           title: Text(
                             'See more info',
-                            style: Theme.of(context).textTheme.bodyMedium!.copyWith(
+                            style: Theme.of(context)
+                                .textTheme
+                                .bodyMedium!
+                                .copyWith(
                                   color: blueColor,
                                 ),
                           ),
@@ -195,7 +282,7 @@ class GroupPage extends StatelessWidget {
               ),
             ),
             expandGap12(
-              color: brightGrayColor,
+              color: brightGreyColor,
             ),
             Padding(
               padding: paddingH16,
@@ -221,7 +308,7 @@ class GroupPage extends StatelessWidget {
                                     .textTheme
                                     .bodyMedium!
                                     .copyWith(
-                                      color: grayColor,
+                                      color: greyColor,
                                       fontWeight: FontWeight.bold,
                                     ),
                               )
@@ -237,7 +324,7 @@ class GroupPage extends StatelessWidget {
                           padding: padding0,
                           icon: Icon(
                             rightArrowIcon,
-                            color: grayColor,
+                            color: greyColor,
                             size: size24,
                           ),
                         ),
@@ -245,17 +332,14 @@ class GroupPage extends StatelessWidget {
                     ],
                   ),
                   gap12,
-                  SmallGallery(
-                    count: 9,
-                    onPressed: () {
-                      ///TODO: complete this action
-                    },
-                  ),
+                  Gallery(
+                    count: 9, categories: categoryModels,
+                      ),
                   gap24,
                 ],
               ),
             ),
-            expandGap12(color: brightGrayColor),
+            expandGap12(color: brightGreyColor),
             PostsList(),
           ],
         ),

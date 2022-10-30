@@ -21,7 +21,7 @@ class WeatherComponent extends StatelessWidget {
                 Expanded(
                   child: Text('17:56, Cairo, Egypt',
                   style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                    color: grayColor,
+                    color: greyColor,
                   ),),
                 ),
                 SizedBox.square(
@@ -32,7 +32,7 @@ class WeatherComponent extends StatelessWidget {
                     icon: Icon(
                       reloadIcon,
                     ),
-                    color: grayColor,
+                    color: greyColor,
                     iconSize: size24,
                   ),
                 )
@@ -70,7 +70,7 @@ class WeatherComponent extends StatelessWidget {
                         children: [
                           TextSpan(
                             style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                              color: grayColor,
+                              color: greyColor,
                             ),
                             text: 'Fells Like ',
                           ),
@@ -87,7 +87,7 @@ class WeatherComponent extends StatelessWidget {
             ),
             gap8,
             expandGap1(
-              color: brightGrayColor,
+              color: brightGreyColor,
             ),
             gap12,
             SizedBox(
@@ -107,7 +107,7 @@ class WeatherComponent extends StatelessWidget {
                       Text(
                         '18:00',
                         style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                          color: grayColor,
+                          color: greyColor,
                         ),
                       ),
                       SizedBox.fromSize(
@@ -142,7 +142,7 @@ class WeatherComponent extends StatelessWidget {
         color: whiteColor,
         boxShadow: [
           BoxShadow(
-            color: brightGrayColor,
+            color: brightGreyColor,
             spreadRadius: size1,
             blurRadius: size1,
           )

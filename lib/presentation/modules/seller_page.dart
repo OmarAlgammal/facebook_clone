@@ -4,7 +4,7 @@ import 'package:facebook_clone/presentation/constance/colors.dart';
 import 'package:facebook_clone/presentation/constance/dimens.dart';
 import 'package:facebook_clone/presentation/constance/icons.dart';
 import 'package:facebook_clone/presentation/models/category_model.dart';
-import 'package:facebook_clone/presentation/screens/marketplace_page.dart';
+import 'package:facebook_clone/presentation/modules/marketplace_page.dart';
 import 'package:flutter/material.dart';
 
 class SellerPage extends StatelessWidget {
@@ -158,9 +158,8 @@ class SellerPage extends StatelessWidget {
                         child: Column(
                           children: [
                             ImageWithBadge(
-                              imageUrl: '',
                               showOnlineState: false,
-                              imageRadius: 140,
+                              imageRadius: size72,
                             ),
                             gap24,
                             Row(
@@ -168,9 +167,9 @@ class SellerPage extends StatelessWidget {
                               children: [
                                 Expanded(
                                   child: Text(
-                                    'Omar Algammal Omar Algammal',
+                                    'Omar Algammal',
                                     textAlign: TextAlign.center,
-                                    maxLines: 1,
+                                    maxLines: 2,
                                     style: Theme.of(context)
                                         .textTheme
                                         .headlineMedium!
@@ -208,7 +207,7 @@ class SellerPage extends StatelessWidget {
                                       .textTheme
                                       .bodyMedium!
                                       .copyWith(
-                                        color: grayColor,
+                                        color: greyColor,
                                       ),
                                 ),
                               ],
@@ -274,7 +273,7 @@ class SellerPage extends StatelessWidget {
                               ],
                             ),
                             gap16,
-                            expandGap1(color: brightGrayColor),
+                            expandGap1(color: brightGreyColor),
                             gap24,
                           ],
                         ),
@@ -301,7 +300,7 @@ class SellerPage extends StatelessWidget {
                       color: blackColor,
                       fontWeight: FontWeight.bold,
                     ),
-                unselectedLabelColor: grayColor,
+                unselectedLabelColor: greyColor,
                 unselectedLabelStyle: Theme.of(context).textTheme.bodyLarge,
                 tabs: [
                   Tab(

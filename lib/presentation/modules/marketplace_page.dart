@@ -1,4 +1,6 @@
-import 'package:facebook_clone/presentation/components/small_gallery.dart';
+import 'package:facebook_clone/presentation/components/galleryWithDescription.dart';
+import 'package:facebook_clone/presentation/components/rounded_image_with_description.dart';
+import 'package:facebook_clone/presentation/components/gallery.dart';
 import 'package:facebook_clone/presentation/constance/colors.dart';
 import 'package:facebook_clone/presentation/constance/dimens.dart';
 import 'package:facebook_clone/presentation/constance/icons.dart';
@@ -10,6 +12,8 @@ class MarketPlacePage extends StatelessWidget {
   const MarketPlacePage({Key? key, required this.categories}) : super(key: key);
 
   final List<CategoryModel> categories;
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +23,7 @@ class MarketPlacePage extends StatelessWidget {
         shrinkWrap: true,
         children: [
           expandGap12(
-            color: brightGrayColor,
+            color: brightGreyColor,
           ),
           gap12,
           Padding(
@@ -29,21 +33,19 @@ class MarketPlacePage extends StatelessWidget {
               children: [
                 Text(
                   'Categories',
-                  style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                        fontWeight: FontWeight.bold,
-                      ),
+                  style: Theme
+                      .of(context)
+                      .textTheme
+                      .titleLarge!
+                      .copyWith(
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
                 gap8,
-                SmallGallery(
-                  forMarketplace: true,
-                  categories: categories,
-                  onPressed: (){
-                    Navigator.pushNamed(context, AppRoutes.seeAllProductPage);
-                  },
-                ),
+                GalleryWithDescription(categoryModels: categories),
                 gap24,
                 InkWell(
-                  onTap: (){
+                  onTap: () {
                     ///TODO: load more categories
                   },
                   child: Row(
@@ -51,7 +53,11 @@ class MarketPlacePage extends StatelessWidget {
                     children: [
                       Text(
                         'See more',
-                        style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                        style: Theme
+                            .of(context)
+                            .textTheme
+                            .titleMedium!
+                            .copyWith(
                           color: blueColor,
                           fontWeight: FontWeight.bold,
                         ),

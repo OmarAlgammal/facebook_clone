@@ -30,9 +30,10 @@ const double size70 = 70.0;
 const double size72 = 72.0;
 const double size80 = 80.0;
 const double size86 = 86.0;
+const double size120 = 120.0;
 
 const BorderRadius circular4 = BorderRadius.all(Radius.circular(4));
-const BorderRadius circular8 = BorderRadius.all(Radius.circular(4));
+const BorderRadius circular8 = BorderRadius.all(Radius.circular(8));
 const BorderRadius circular12 = BorderRadius.all(Radius.circular(12));
 const BorderRadius circularInfinity = BorderRadius.all(Radius.circular(100));
 
@@ -85,6 +86,7 @@ Gap expandGap24({Color? color}) => Gap.expand(
 const EdgeInsets padding0 = EdgeInsets.all(0);
 const EdgeInsets padding2 = EdgeInsets.all(2);
 const EdgeInsets padding4 = EdgeInsets.all(4);
+const EdgeInsets padding6 = EdgeInsets.all(6);
 const EdgeInsets padding5 = EdgeInsets.all(5);
 const EdgeInsets padding8 = EdgeInsets.all(8);
 const EdgeInsets padding12 = EdgeInsets.all(12);

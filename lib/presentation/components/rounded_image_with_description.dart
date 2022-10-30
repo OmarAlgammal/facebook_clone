@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 class RoundedImageWithDescription extends StatelessWidget {
   const RoundedImageWithDescription({
     Key? key,
-    required this.imageUrl,
+    this.imageUrl,
     this.verticalArrange = true,
     this.imageRadius,
     this.showSaveIcon = false,
@@ -25,8 +25,10 @@ class RoundedImageWithDescription extends StatelessWidget {
   final String? text1, text2;
   final bool showSaveIcon, verticalArrange;
   final TextStyle? text1Style, text2Style;
-  final String imageUrl;
+  final String? imageUrl;
   final bool centerText1;
+
+  /// TODO: make imager url required
 
   @override
   Widget build(BuildContext context) {
@@ -60,7 +62,7 @@ class RoundedImageWithDescription extends StatelessWidget {
             ClipRRect(
               borderRadius: borderRadius,
               child: Image.network(
-                imageUrl,
+                imageUrl ?? 'https://media.istockphoto.com/vectors/pants-cartoon-vector-id1076492576?k=20&m=1076492576&s=612x612&w=0&h=905nrZDJOI6SIVT_9nG3VbvE_vuZXBXUv5luZOXOyxU=',
                 height: imageRadius,
                 width: imageRadius,
                 fit: (imageRadius == null)? BoxFit.contain : BoxFit.fill,

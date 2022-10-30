@@ -4,7 +4,7 @@ import 'package:facebook_clone/presentation/components/writing_box.dart';
 import 'package:facebook_clone/presentation/constance/colors.dart';
 import 'package:facebook_clone/presentation/constance/dimens.dart';
 import 'package:facebook_clone/presentation/constance/icons.dart';
-import 'package:facebook_clone/presentation/screens/news_page.dart';
+import 'package:facebook_clone/presentation/modules/news_page.dart';
 import 'package:facebook_clone/utilities/routes.dart';
 import 'package:flutter/material.dart';
 
@@ -46,9 +46,7 @@ class HomePage extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            ImageWithBadge(
-                              showOnlineState: false,
-                            ),
+                            ImageWithBadge(),
                             gap12,
                             Expanded(
                                 child: WritingBox(
@@ -63,7 +61,7 @@ class HomePage extends StatelessWidget {
                             gap12,
                             MyIcon(
                               icon: imageIcon,
-                              color: grayColor,
+                              color: greyColor,
                               onPressed: () {
                                 //TODO: COMPLETE NAVIGATION TO GALLERY
                               },
@@ -75,7 +73,7 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   expandGap2(
-                    color: brightGrayColor,
+                    color: brightGreyColor,
                   ),
                 ],
               ),
@@ -100,7 +98,7 @@ class HomePage extends StatelessWidget {
                                     color: blackColor,
                                     fontWeight: FontWeight.bold,
                                   ),
-                          unselectedLabelColor: grayColor,
+                          unselectedLabelColor: greyColor,
                           unselectedLabelStyle:
                               Theme.of(context).textTheme.bodyLarge,
                           padding: padding0,
@@ -117,22 +115,22 @@ class HomePage extends StatelessWidget {
                           ],
                         ),
                       ),
-                      IconButton(
-                        onPressed: () {},
-                        icon: Icon(
-                          videoIcon,
-                          color: blueColor,
-                          size: Theme.of(context).textTheme.headline4!.fontSize,
-                        ),
-                      ),
-                      IconButton(
-                        onPressed: () {},
-                        icon: Icon(
-                          videoIcon,
-                          color: blueColor,
-                          size: Theme.of(context).textTheme.headline4!.fontSize,
-                        ),
-                      ),
+                      // IconButton(
+                      //   onPressed: () {},
+                      //   icon: Icon(
+                      //     videoIcon,
+                      //     color: blueColor,
+                      //     size: Theme.of(context).textTheme.headline4!.fontSize,
+                      //   ),
+                      // ),
+                      // IconButton(
+                      //   onPressed: () {},
+                      //   icon: Icon(
+                      //     roomIcon,
+                      //     color: blueColor,
+                      //     size: Theme.of(context).textTheme.headline4!.fontSize,
+                      //   ),
+                      // ),
                     ],
                   ),
                 ),

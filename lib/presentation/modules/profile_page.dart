@@ -1,9 +1,10 @@
+import 'package:facebook_clone/presentation/components/gallery.dart';
 import 'package:facebook_clone/presentation/components/profile_state.dart';
 import 'package:facebook_clone/presentation/components/rounded_button.dart';
-import 'package:facebook_clone/presentation/components/small_gallery.dart';
 import 'package:facebook_clone/presentation/constance/colors.dart';
 import 'package:facebook_clone/presentation/constance/dimens.dart';
 import 'package:facebook_clone/presentation/constance/icons.dart';
+import 'package:facebook_clone/presentation/models/category_model.dart';
 import 'package:facebook_clone/updated_component/posts_list.dart';
 import 'package:facebook_clone/utilities/routes.dart';
 import 'package:flutter/material.dart';
@@ -11,9 +12,102 @@ import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class ProfilePage extends StatelessWidget {
-  const ProfilePage({Key? key}) : super(key: key);
+  ProfilePage({Key? key}) : super(key: key);
 
   final double profileImageSize = size64;
+
+  final List<CategoryModel> categoryModels = [
+    CategoryModel(
+      imageUrl:
+          'https://imgd.aeplcdn.com/664x374/n/cw/ec/97705/huracan-sto-exterior-right-front-three-quarter-2.jpeg?q=75',
+      text1: 'Vehicles',
+    ),
+    CategoryModel(
+      imageUrl:
+          'https://assets.pbimgs.com/pbimgs/rk/images/dp/wcm/202225/0705/banks-extending-dining-table-2-c.jpg',
+      text1: 'Home',
+    ),
+    CategoryModel(
+      imageUrl:
+          'https://images.rezfusion.com/evrn/HIKEWE/107962/6478780517.jpg?optimize=true&rotate=true&quality=70&width=580',
+      text1: 'Rentals',
+    ),
+    CategoryModel(
+      imageUrl:
+          'https://sparkimg.nl/cdn-cgi/image/w=480,h=320,fit=pad,f=auto/https://static.iphoned.nl/orca/products/18699/apple-iphone-14-pro-max.jpg',
+      text1: 'Electronics',
+    ),
+    CategoryModel(
+      imageUrl:
+          'https://www.patoys.in/image/cache/catalog/productsimage/dls-jeep-dls-002-01-1000x1000.jpg',
+      text1: 'Family',
+    ),
+    CategoryModel(
+      imageUrl:
+          'https://static-01.daraz.com.bd/p/b866f33dd13ec432195fd3f1c2d96206.jpg',
+      text1: 'Clothing',
+    ),
+    CategoryModel(
+      imageUrl:
+          'https://imgd.aeplcdn.com/664x374/n/cw/ec/97705/huracan-sto-exterior-right-front-three-quarter-2.jpeg?q=75',
+      text1: 'Vehicles',
+    ),
+    CategoryModel(
+      imageUrl:
+          'https://assets.pbimgs.com/pbimgs/rk/images/dp/wcm/202225/0705/banks-extending-dining-table-2-c.jpg',
+      text1: 'Home',
+    ),
+    CategoryModel(
+      imageUrl:
+          'https://images.rezfusion.com/evrn/HIKEWE/107962/6478780517.jpg?optimize=true&rotate=true&quality=70&width=580',
+      text1: 'Rentals',
+    ),
+    CategoryModel(
+      imageUrl:
+          'https://sparkimg.nl/cdn-cgi/image/w=480,h=320,fit=pad,f=auto/https://static.iphoned.nl/orca/products/18699/apple-iphone-14-pro-max.jpg',
+      text1: 'Electronics',
+    ),
+    CategoryModel(
+      imageUrl:
+          'https://www.patoys.in/image/cache/catalog/productsimage/dls-jeep-dls-002-01-1000x1000.jpg',
+      text1: 'Family',
+    ),
+    CategoryModel(
+      imageUrl:
+          'https://static-01.daraz.com.bd/p/b866f33dd13ec432195fd3f1c2d96206.jpg',
+      text1: 'Clothing',
+    ),
+    CategoryModel(
+      imageUrl:
+          'https://imgd.aeplcdn.com/664x374/n/cw/ec/97705/huracan-sto-exterior-right-front-three-quarter-2.jpeg?q=75',
+      text1: 'Vehicles',
+    ),
+    CategoryModel(
+      imageUrl:
+          'https://assets.pbimgs.com/pbimgs/rk/images/dp/wcm/202225/0705/banks-extending-dining-table-2-c.jpg',
+      text1: 'Home',
+    ),
+    CategoryModel(
+      imageUrl:
+          'https://images.rezfusion.com/evrn/HIKEWE/107962/6478780517.jpg?optimize=true&rotate=true&quality=70&width=580',
+      text1: 'Rentals',
+    ),
+    CategoryModel(
+      imageUrl:
+          'https://sparkimg.nl/cdn-cgi/image/w=480,h=320,fit=pad,f=auto/https://static.iphoned.nl/orca/products/18699/apple-iphone-14-pro-max.jpg',
+      text1: 'Electronics',
+    ),
+    CategoryModel(
+      imageUrl:
+          'https://www.patoys.in/image/cache/catalog/productsimage/dls-jeep-dls-002-01-1000x1000.jpg',
+      text1: 'Family',
+    ),
+    CategoryModel(
+      imageUrl:
+          'https://static-01.daraz.com.bd/p/b866f33dd13ec432195fd3f1c2d96206.jpg',
+      text1: 'Clothing',
+    ),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -52,8 +146,10 @@ class ProfilePage extends StatelessWidget {
                       width: double.infinity,
                       fit: BoxFit.cover,
                     ),
-                    Align(
-                      alignment: Alignment.bottomCenter,
+                    Positioned(
+                      bottom: 0,
+                      right: 50,
+                      left: 50,
                       child: ProfileState(
                         imageUrl:
                             'https://images.pexels.com/photos/35537/child-children-girl-happy.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
@@ -111,7 +207,7 @@ class ProfilePage extends StatelessWidget {
                                   .textTheme
                                   .bodyMedium!
                                   .copyWith(
-                                    color: grayColor,
+                                    color: greyColor,
                                   ),
                             ),
                           ],
@@ -120,7 +216,7 @@ class ProfilePage extends StatelessWidget {
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             Text(
-                              '43',
+                              '120',
                               style: Theme.of(context)
                                   .textTheme
                                   .bodyLarge!
@@ -135,7 +231,7 @@ class ProfilePage extends StatelessWidget {
                                   .textTheme
                                   .bodyMedium!
                                   .copyWith(
-                                    color: grayColor,
+                                    color: greyColor,
                                   ),
                             ),
                           ],
@@ -159,7 +255,7 @@ class ProfilePage extends StatelessWidget {
                                   .textTheme
                                   .bodyMedium!
                                   .copyWith(
-                                    color: grayColor,
+                                    color: greyColor,
                                   ),
                             ),
                           ],
@@ -167,13 +263,13 @@ class ProfilePage extends StatelessWidget {
                       ],
                     ),
                     gap24,
-                    expandGap1(color: brightGrayColor),
+                    expandGap1(color: brightGreyColor),
                     gap24,
                     ListTile(
                       contentPadding: padding0,
                       leading: SvgPicture.asset(
                         homeSvgIcon,
-                        color: grayColor,
+                        color: greyColor,
                         height: size24,
                         width: size24,
                       ),
@@ -184,7 +280,7 @@ class ProfilePage extends StatelessWidget {
                                 .textTheme
                                 .bodyMedium!
                                 .copyWith(
-                                  color: grayColor,
+                                  color: greyColor,
                                 ),
                             children: [
                               TextSpan(
@@ -202,7 +298,7 @@ class ProfilePage extends StatelessWidget {
                       contentPadding: padding0,
                       leading: Icon(
                         locationIcon,
-                        color: grayColor,
+                        color: greyColor,
                         size: size24,
                       ),
                       title: RichText(
@@ -212,7 +308,7 @@ class ProfilePage extends StatelessWidget {
                                 .textTheme
                                 .bodyMedium!
                                 .copyWith(
-                                  color: grayColor,
+                                  color: greyColor,
                                 ),
                             children: [
                               TextSpan(
@@ -230,13 +326,13 @@ class ProfilePage extends StatelessWidget {
                       contentPadding: padding0,
                       leading: Icon(
                         birthdayIcon,
-                        color: grayColor,
+                        color: greyColor,
                         size: size24,
                       ),
                       title: Text(
                         'Birthday, December 15',
                         style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                              color: grayColor,
+                              color: greyColor,
                             ),
                       ),
                     ),
@@ -258,11 +354,11 @@ class ProfilePage extends StatelessWidget {
                       ),
                     ),
                     gap12,
-                    expandGap1(color: brightGrayColor),
+                    expandGap1(color: brightGreyColor),
                     gap12,
                     RoundedButton(
                       text: 'Edit Profile',
-                      fillColor: brightGrayColor,
+                      fillColor: brightGreyColor,
                       textColor: blueColor,
                       onPressed: () {
                         ///EDIT: complete edit profile action
@@ -272,14 +368,14 @@ class ProfilePage extends StatelessWidget {
                   ],
                 ),
               ),
-              expandGap12(color: brightGrayColor),
+              expandGap12(color: brightGreyColor),
               gap12,
               Padding(
                 padding: paddingH16,
                 child: Column(
                   children: [
                     InkWell(
-                      onTap: (){
+                      onTap: () {
                         Navigator.pushNamed(context, AppRoutes.galleryPage);
                       },
                       child: Row(
@@ -301,7 +397,7 @@ class ProfilePage extends StatelessWidget {
                                         .textTheme
                                         .bodyMedium!
                                         .copyWith(
-                                          color: grayColor,
+                                          color: greyColor,
                                           fontWeight: FontWeight.bold,
                                         ),
                                   )
@@ -317,7 +413,7 @@ class ProfilePage extends StatelessWidget {
                               padding: padding0,
                               icon: Icon(
                                 rightArrowIcon,
-                                color: grayColor,
+                                color: greyColor,
                                 size: size24,
                               ),
                             ),
@@ -326,16 +422,15 @@ class ProfilePage extends StatelessWidget {
                       ),
                     ),
                     gap12,
-                    SmallGallery(
-                      onPressed: () {
-                        ///TODO: complete this action
-                      },
+                    Gallery(
+                      count: 9,
+                      categories: categoryModels,
                     ),
                   ],
                 ),
               ),
               expandGap12(
-                color: brightGrayColor,
+                color: brightGreyColor,
               ),
               PostsList(),
             ],

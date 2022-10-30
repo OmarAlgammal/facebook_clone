@@ -30,13 +30,15 @@ class ProductPage extends StatelessWidget {
         systemOverlayStyle: SystemUiOverlayStyle(
           statusBarColor: Colors.transparent,
         ),
+        iconTheme: IconThemeData(
+          color: whiteColor,
+        ),
         automaticallyImplyLeading: true,
         actions: [
           IconButton(
             onPressed: () {},
             icon: Icon(
               moreIcon,
-              color: Colors.black,
             ),
           ),
         ],
@@ -64,9 +66,14 @@ class ProductPage extends StatelessWidget {
                             size24,
                           ),
                         ),
-                        child: Image.network(
-                          productImages[index],
-                          fit: BoxFit.fill,
+                        child: InkWell(
+                          onTap: (){
+                            /// TODO: show product image in separated screen
+                          },
+                          child: Image.network(
+                            productImages[index],
+                            fit: BoxFit.fill,
+                          ),
                         ),
                       );
                     },
@@ -79,7 +86,7 @@ class ProductPage extends StatelessWidget {
                   effect: WormEffect(
                       dotHeight: size4,
                       dotWidth: size24,
-                      dotColor: brightGrayColor,
+                      dotColor: brightGreyColor,
                       activeDotColor: blueColor,
                       type: WormType.normal
                       // strokeWidth: 5,
@@ -115,7 +122,7 @@ class ProductPage extends StatelessWidget {
                                         .textTheme
                                         .bodyLarge!
                                         .copyWith(
-                                          color: grayColor,
+                                          color: greyColor,
                                           fontWeight: FontWeight.bold,
                                         )),
                                 TextSpan(
@@ -124,7 +131,7 @@ class ProductPage extends StatelessWidget {
                                       .textTheme
                                       .bodyMedium!
                                       .copyWith(
-                                        color: grayColor,
+                                        color: greyColor,
                                       ),
                                 )
                               ]),
@@ -133,9 +140,7 @@ class ProductPage extends StatelessWidget {
                       gap8,
                       /// TODO: edit product title
                       Text(
-                        'We build personalized homes to fi'
-                        'We build personalized homes to fi'
-                        'We build personalized homes to fi',
+                        'We build personalized homes to fiWe build personalized homes',
                         style: Theme.of(context).textTheme.headlineSmall!.copyWith(
                               fontWeight: FontWeight.bold,
                             ),
@@ -181,7 +186,7 @@ class ProductPage extends StatelessWidget {
                         ],
                       ),
                       gap24,
-                      expandGap1(color: brightGrayColor,),
+                      expandGap1(color: brightGreyColor,),
                       gap8,
                       Text(
                         'Seller',
@@ -191,36 +196,30 @@ class ProductPage extends StatelessWidget {
                       ),
                       gap8,
                       Row(children: [
-                        Expanded(
-                          child: InkWell(
-                            onTap: (){
-                              Navigator.pushNamed(context, AppRoutes.sellerPage);
-                            },
-                            child: Row(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                ImageWithBadge(
-                                  imageUrl: 'imageUrl',
-                                  imageRadius: size48,
-                                  showOnlineState: false,
-                                ),
-                                gap12,
-                                Expanded(
-                                  child: Text(
-                                    'Omar Algammal',
-                                    style: Theme.of(context).textTheme.bodyLarge,
-                                  ),
-                                ),
-                              ],
-                            ),
+                        InkWell(
+                          onTap: (){
+                            Navigator.pushNamed(context, AppRoutes.sellerPage);
+                          },
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              ImageWithBadge(
+                                showOnlineState: false,
+                              ),
+                              gap12,
+                              Text(
+                                'Omar Algammal',
+                                style: Theme.of(context).textTheme.bodyLarge,
+                              ),
+                            ],
                           ),
                         ),
                         RoundedButton(
                           text: 'Follow',
                           onPressed: () {},
-                          fillColor: brightGrayColor,
+                          fillColor: brightGreyColor,
                           textColor: blackColor,
-                          buttonWidth: MediaQuery.of(context).size.width / 5,
+                          width: MediaQuery.of(context).size.width / 5,
                         ),
                       ])
                     ],
@@ -236,7 +235,7 @@ class ProductPage extends StatelessWidget {
                     color: whiteColor,
                     boxShadow: [
                       BoxShadow(
-                        color: brightGrayColor,
+                        color: brightGreyColor,
                         spreadRadius: size2,
                         blurRadius: size2,
                       ),
@@ -262,7 +261,7 @@ class ProductPage extends StatelessWidget {
                                   .textTheme
                                   .bodyMedium!
                                   .copyWith(
-                                    color: grayColor,
+                                    color: greyColor,
                                   ),
                             ),
                           ],

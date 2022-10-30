@@ -2,13 +2,17 @@ import 'package:facebook_clone/presentation/constance/colors.dart';
 import 'package:facebook_clone/presentation/constance/dimens.dart';
 import 'package:facebook_clone/utilities/routers.dart';
 import 'package:facebook_clone/utilities/routes.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:responsive_framework/responsive_framework.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
+
 }
 
 class MyApp extends StatelessWidget {
@@ -36,30 +40,27 @@ class MyApp extends StatelessWidget {
                   statusBarIconBrightness: Brightness.dark
               )
           ),
+          iconTheme: IconThemeData(
+            color: greyColor,
+          ),
           textTheme: TextTheme(
             headlineSmall: Theme.of(context).textTheme.headlineMedium!.copyWith(
               color: blackColor,
-              overflow: TextOverflow.ellipsis
             ),
             headlineMedium: Theme.of(context).textTheme.headlineMedium!.copyWith(
               color: blackColor,
-                overflow: TextOverflow.ellipsis
             ),
             headlineLarge: Theme.of(context).textTheme.headlineLarge!.copyWith(
               color: blackColor,
-                overflow: TextOverflow.ellipsis
             ),
               bodyMedium: Theme.of(context).textTheme.bodyMedium!.copyWith(
                 color: blackColor,
-                  overflow: TextOverflow.ellipsis
               ),
             bodySmall: Theme.of(context).textTheme.bodySmall!.copyWith(
               color: blackColor,
-                overflow: TextOverflow.ellipsis
             ),
             bodyLarge: Theme.of(context).textTheme.bodyLarge!.copyWith(
               color: blackColor,
-                overflow: TextOverflow.ellipsis
             ),
           )
       ),
@@ -76,7 +77,7 @@ class MyApp extends StatelessWidget {
         ],
         background: Container(color: Color(0xFFF5F5F5)),
       ),
-      initialRoute: AppRoutes.publishingPage,
+      initialRoute: AppRoutes.loginPage,
     );
   }
 }

@@ -27,7 +27,7 @@ const String homeActiveSvgIcon = 'assets/icons/home_active.svg';
 /// BOTTOM NAV PAGE
 SvgPicture homeIcon = SvgPicture.asset(
   'assets/icons/home.svg',
-  color: brightGrayColor,
+  color: brightGreyColor,
 );
 SvgPicture homeActiveIcon = SvgPicture.asset(
   'assets/icons/home_active.svg',
@@ -48,7 +48,8 @@ const IconData smileIcon = FontAwesomeIcons.faceSmile;
 
 const IconData imageIcon = Ionicons.image_outline;
 const IconData addIcon = Ionicons.add;
-const IconData videoIcon = Ionicons.videocam;
+const IconData videoIcon = FontAwesomeIcons.video;
+const IconData roomIcon = Ionicons.create;
 const IconData moreIcon = Icons.more_vert_outlined;
 const IconData shareIcon = FontAwesomeIcons.share;
 const IconData shareOutlinedIcon = Ionicons.share_outline;
@@ -96,3 +97,8 @@ const IconData settingsIcon = Icons.settings;
 const IconData starIcon = Icons.star;
 const IconData mailIcon = Icons.mail_outlined;
 const IconData arrowDown = Icons.keyboard_arrow_down;
+
+
+const IconData callIcon = Icons.call_outlined;
+const IconData attachFileIcon = Icons.attach_file_outlined;
+const IconData micIcon = Icons.mic_none_rounded;

@@ -15,7 +15,7 @@ class UploadsPhotosPage extends StatelessWidget {
         padding: padding0,
         children: [
           gap12,
-          expandGap12(color: brightGrayColor),
+          expandGap12(color: brightGreyColor),
           gap24,
           MasonryGridView.count(
               shrinkWrap: true,

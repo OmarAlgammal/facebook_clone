@@ -4,8 +4,8 @@ import 'package:facebook_clone/presentation/constance/dimens.dart';
 import 'package:facebook_clone/presentation/reactions_type.dart';
 import 'package:flutter/material.dart';
 
-class NotificationItem extends StatelessWidget {
-  const NotificationItem({Key? key, required this.userProfileImageUrl, required this.userName, this.reactionType,}) : super(key: key);
+class PostNotification extends StatelessWidget {
+  const PostNotification({Key? key, required this.userProfileImageUrl, required this.userName, this.reactionType,}) : super(key: key);
 
   final String userProfileImageUrl;
   final String userName;
@@ -35,7 +35,6 @@ class NotificationItem extends StatelessWidget {
                     TextSpan(
                       text: userName,
                       style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                        color: blueColor,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -43,16 +42,14 @@ class NotificationItem extends StatelessWidget {
                       text: ' posted in ',
                     ),
                     TextSpan(
-                      text: 'Creative media',
+                      text: 'Creative media :\n',
                       style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                        color: blueColor,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     TextSpan(
                       text: 'Hello please tell me where is the interface design class is heild?, hi omar i am here',
                       style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-                        color: blueColor,
                         overflow: TextOverflow.ellipsis,
                       ),
                     )
@@ -63,7 +60,7 @@ class NotificationItem extends StatelessWidget {
               Text(
                 'Today at 17:21',
                 style: Theme.of(context).textTheme.bodySmall!.copyWith(
-                  color: grayColor,
+                  color: greyColor,
                 ),
               )
             ],
@@ -82,4 +79,5 @@ class NotificationItem extends StatelessWidget {
       ],
     );
   }
+
 }

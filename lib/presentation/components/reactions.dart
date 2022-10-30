@@ -30,15 +30,15 @@ class Reactions extends StatelessWidget {
             children: [
               DecoratedBox(
                   decoration: BoxDecoration(
-                    color: brightGrayColor,
+                    color: brightGreyColor,
                     border: Border.all(
-                      color: isSelected? blueColor : brightGrayColor,
+                      color: (isSelected || index == 1)? blueColor : brightGreyColor,
                       width: haveSize1,
                     ),
                     borderRadius: circularInfinity,
                   ),
                   child: Padding(
-                    padding: padding4,
+                    padding: padding6,
                     child: Row(
                       mainAxisSize: MainAxisSize.min,
                       mainAxisAlignment: MainAxisAlignment.center,
