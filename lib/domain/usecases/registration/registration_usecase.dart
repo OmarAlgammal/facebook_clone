@@ -12,4 +12,8 @@ class RegistrationUseCase{
     return registrationDataSource.createAccountWithEmailAndPassword(email: email, password: password);
   }
 
+  Future<Either<FirebaseAuthException, UserCredential>> signInWithEmailAndPassword({required String email, required String password}) async{
+    return await registrationDataSource.signInWithEmailAndPassword(email: email, password: password);
+  }
+
 }

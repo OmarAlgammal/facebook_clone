@@ -1,15 +1,16 @@
 import 'package:facebook_clone/presentation/modules/all_groups_page.dart';
 import 'package:facebook_clone/presentation/modules/bottom_nav_page.dart';
-import 'package:facebook_clone/presentation/modules/create_account_page.dart';
 import 'package:facebook_clone/presentation/modules/friends_page.dart';
 import 'package:facebook_clone/presentation/modules/gallery_page.dart';
 import 'package:facebook_clone/presentation/modules/group_page.dart';
 import 'package:facebook_clone/presentation/modules/home_page.dart';
-import 'package:facebook_clone/presentation/modules/login_page.dart';
+import 'package:facebook_clone/presentation/modules/landing_page/landing_page.dart';
 import 'package:facebook_clone/presentation/modules/news_page.dart';
 import 'package:facebook_clone/presentation/modules/productPage.dart';
 import 'package:facebook_clone/presentation/modules/profile_page.dart';
 import 'package:facebook_clone/presentation/modules/publishing_page.dart';
+import 'package:facebook_clone/presentation/modules/registration/create_account_app/create_account_page.dart';
+import 'package:facebook_clone/presentation/modules/registration/login_app/login_page.dart';
 import 'package:facebook_clone/presentation/modules/saved_elements.dart';
 import 'package:facebook_clone/presentation/modules/see_all_products_page.dart';
 import 'package:facebook_clone/presentation/modules/seller_page.dart';
@@ -20,6 +21,8 @@ import 'package:flutter/cupertino.dart';
 import '../presentation/modules//chat_page.dart';
 
 Map<String, Widget> routes = {
+
+  AppRoutes.landingPage: const LandingPage(),
 
   AppRoutes.loginPage: const LoginPage(),
   AppRoutes.createAccountPage: const CreateAccountPage(),

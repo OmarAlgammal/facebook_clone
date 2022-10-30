@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "688350266522",
+    "project_id": "facebook-clone-a652b",
+    "storage_bucket": "facebook-clone-a652b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:688350266522:android:ae593c58049de3f18ecb23",
+        "android_client_info": {
+          "package_name": "com.devomar.facebook_clone.facebook_clone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "688350266522-sujmdlb0gteu26teklbnt88ua7mm4uit.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8m8wgmqVvmIegxa--yBrN5ZT4_6YSjdg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "688350266522-sujmdlb0gteu26teklbnt88ua7mm4uit.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "688350266522-3vr3s85fsjmgm09louparmrqjsfk7r8f.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "package-name.facebookClone"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

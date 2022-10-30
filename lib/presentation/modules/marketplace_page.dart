@@ -1,11 +1,8 @@
 import 'package:facebook_clone/presentation/components/galleryWithDescription.dart';
-import 'package:facebook_clone/presentation/components/rounded_image_with_description.dart';
-import 'package:facebook_clone/presentation/components/gallery.dart';
 import 'package:facebook_clone/presentation/constance/colors.dart';
 import 'package:facebook_clone/presentation/constance/dimens.dart';
 import 'package:facebook_clone/presentation/constance/icons.dart';
 import 'package:facebook_clone/presentation/models/category_model.dart';
-import 'package:facebook_clone/utilities/routes.dart';
 import 'package:flutter/material.dart';
 
 class MarketPlacePage extends StatelessWidget {

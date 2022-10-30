@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>201605732341-pgdqk7rn7ikpduq9biju0cn8bopotets.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.201605732341-pgdqk7rn7ikpduq9biju0cn8bopotets</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB8ycxIeTEquKRPuvuOEZMr4F7xpLcWbbA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>201605732341</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>package-name.facebookClone</string>
+	<key>PROJECT_ID</key>
+	<string>facedfdexit</string>
+	<key>STORAGE_BUCKET</key>
+	<string>facedfdexit.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:201605732341:ios:f8c2ce65ccfd570eca72bc</string>
+</dict>
+</plist>

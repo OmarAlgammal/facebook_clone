@@ -1,5 +1,4 @@
 import 'package:facebook_clone/presentation/components/image_with_badge.dart';
-import 'package:facebook_clone/presentation/components/profile_state.dart';
 import 'package:facebook_clone/presentation/constance/colors.dart';
 import 'package:facebook_clone/presentation/constance/dimens.dart';
 import 'package:flutter/material.dart';

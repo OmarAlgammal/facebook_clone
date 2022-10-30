@@ -1,5 +1,4 @@
 
-import 'package:facebook_clone/presentation/components/rounded_image_with_description.dart';
 import 'package:facebook_clone/presentation/constance/dimens.dart';
 import 'package:facebook_clone/presentation/models/category_model.dart';
 import 'package:flutter/material.dart';

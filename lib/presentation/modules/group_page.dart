@@ -1,6 +1,6 @@
+import 'package:facebook_clone/presentation/components/gallery.dart';
 import 'package:facebook_clone/presentation/components/image_with_badge.dart';
 import 'package:facebook_clone/presentation/components/rounded_button.dart';
-import 'package:facebook_clone/presentation/components/gallery.dart';
 import 'package:facebook_clone/presentation/components/writing_box.dart';
 import 'package:facebook_clone/presentation/constance/colors.dart';
 import 'package:facebook_clone/presentation/constance/dimens.dart';

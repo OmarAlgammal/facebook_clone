@@ -1,10 +1,8 @@
 import 'package:facebook_clone/presentation/components/friend_request_item.dart';
-import 'package:facebook_clone/presentation/components/rounded_button.dart';
 import 'package:facebook_clone/presentation/constance/colors.dart';
 import 'package:facebook_clone/presentation/constance/dimens.dart';
 import 'package:facebook_clone/presentation/constance/icons.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class FriendsPage extends StatelessWidget {
   FriendsPage({Key? key}) : super(key: key);
